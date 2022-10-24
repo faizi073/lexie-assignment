@@ -1,0 +1,55 @@
+<GeneralContainer>
+  <div>
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        <LinkTo @route="index">
+          Home
+        </LinkTo>
+      </li>
+      <li class="breadcrumb-item">Product page</li>
+    </ol>
+  </div>
+
+  <main class="item-container">
+
+    <div class="left-column">
+      <img src={{this.model.download_url}} alt="">
+    </div>
+
+
+    <div class="right-column">
+
+      <div class="product-description">
+        <h1>{{this.model.author}}</h1>
+      </div>
+
+
+      <div class="product-size">
+        <div class="field">
+          <label for="width">Width</label>
+          {{!-- <input type="text" id="width" name="width" value={{this.width}}> --}}
+          {{input value=width type="number" id="width" name="width" min=1 }}
+
+
+        </div>
+        <div class="field">
+          <label for="height">Height</label>
+          {{input value=height type="number" id="height" name="height" min=1}}
+        </div>
+      </div>
+
+      <div>
+        <button href="#" {{on "click" this.calculatePrice }}class="button">Calculate Price</button>
+      </div>
+
+
+      <div class="product-price">
+        <span>Price: {{this.price}}$</span>
+        <button class="button" {{on "click" this.addToCart}} disabled={{this.disabledCart}}><i
+            class="fa fa-shopping-cart mr-1"></i>Add to cart</button>
+      </div>
+
+    </div>
+  </main>
+
+</GeneralContainer>
