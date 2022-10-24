@@ -4,9 +4,8 @@
       {{#each this.productItems as |product|}}
       <LinkTo @route="item" @model={{product.id}}>
         <li class="card">
-          <img src={{product.image}} alt="">
+          <img src={{product.download_url}} alt="">
           <h3>{{product.author}}</h3>
-          <p>Lorem ipsum sit dolor amit</p>
         </li>
       </LinkTo>
       {{/each}}
