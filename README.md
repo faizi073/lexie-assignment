@@ -13,7 +13,7 @@ A short introduction of this app could easily go here.
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd emberjs-tutorial`
+* `cd lexie-assignment`
 * `npm install`
 
 ## Running / Development
